@@ -3,7 +3,7 @@ import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 
 const api = axios.create({
-  baseURL: 'http://192.168.1.4:3333'
+  baseURL: 'http://192.168.1.2:3333'
 });
 
 export default api;

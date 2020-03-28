@@ -13,7 +13,7 @@ export default function Logon() {
   const [id, setId] = useState('');
   const history = useHistory();
 
-  async function handleLogin(e){
+  async function handleLogin(e) {
     e.preventDefault();
 
     try {
@@ -30,28 +30,27 @@ export default function Logon() {
   }
 
   return (
-   <div className="logo-container">
-   <section className="form">
-     <img src={logoImg} alt="Be the Hero"/>
+    <div className="logo-container">
+      <section className="form">
+        <img src={logoImg} alt="Be the Hero" />
 
-     <form onSubmit={handleLogin}>
-       <h1>Faça seu logon</h1>
-       <input
-       placeholder="Sua ID"
-       value={id}
-       onChange={e => setId(e.target.value)}
-       />
-       <button className="button" type="submit">Entrar</button>
+        <form onSubmit={handleLogin}>
+          <h1>Faça seu logon</h1>
+          <input
+            placeholder="Sua ID"
+            value={id}
+            onChange={e => setId(e.target.value)}
+          />
+          <button className="button" type="submit">Entrar</button>
 
-       <Link className="back-link" to="/register">
-        < FiLogIn size={16} color="#E02041" />
-        Não Tenho Cadastro
+          <Link className="back-link" to="/register">
+            < FiLogIn size={16} color="#E02041" />Não Tenho Cadastro
        </Link>
-     </form>
+        </form>
 
-   </section>
+      </section>
 
-   <img src={covidImg} alt="Covid"/>
-   </div>
+      <img src={covidImg} alt="Covid" />
+    </div>
   )
 }
